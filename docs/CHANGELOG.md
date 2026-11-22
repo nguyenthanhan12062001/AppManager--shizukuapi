@@ -1,29 +1,45 @@
-# Changelog
+Changelog
 
-All notable changes to Shizuku Manager are documented in this file.
+All notable changes to Shizuku Manager are documented here.
 
-## [1.0.0] - 2026-11-22
+[1.0.0] - 2026-11-22
 
-### Added
+First public release of Shizuku Manager.
 
-- Initial public release
-- Enable / Disable / Suspend / Unsuspend / Freeze / Unfreeze / Force Stop / Uninstall
-- App Profiles with JSON export/import and apply/restore
-- Operation history with success/failure filtering
-- Shizuku integration (non-root package management)
-- LiveData-based UI with Manual DI + Repository + MVVM
-- Localization: English and Vietnamese
-- Material Design 3 with glassmorphism background
-- Unit tests (JUnit, Robolectric) and instrumented tests (Espresso)
+Added
 
-### Security
+- Manage installed applications through Shizuku without requiring root access.
+- Support for enabling, disabling, suspending, unsuspending, freezing, unfreezing, force stopping, and uninstalling applications.
+- App Profiles for saving and managing application states.
+- Import and export profiles using JSON files.
+- Operation history with success and failure status.
+- Detailed error information for failed operations.
+- Application filtering by enabled, disabled, and suspended states.
+- Shizuku connection status monitoring.
+- English and Vietnamese language support.
+- Material Design 3 interface with optional gradient background effects.
 
-- Removed private keystore (`release-key.jks`) from repository
-- Removed hardcoded signing passwords from `gradle.properties`
-- Added `signing.properties.example` for user-provided release signing
-- Added `.gitignore` rules for keystore, signing properties, and IDE metadata
+Improved
 
-### Changed
+- More consistent application state updates after package operations.
+- Better handling of Shizuku connection changes and service interruptions.
+- Improved feedback for individual and bulk operations.
+- More efficient application list updates.
+- Better handling of application icons and related resources.
+- Improved profile management and state restoration.
 
-- Renamed Java package from `com.example` to `com.shizukumanager.app`
-- All Java comments standardized to Vietnamese without diacritics
+Technical
+
+- Java-based Android application.
+- Room for local data storage.
+- LiveData and ViewModel for UI state management.
+- Repository pattern with lightweight manual dependency injection.
+- Binder IPC for Shizuku communication.
+
+Repository
+
+- Added project documentation and setup instructions.
+- Added contribution and security guidelines.
+- Added example signing configuration.
+- Added GitHub issue and pull request templates.
+- Added repository configuration and ignore rules.
