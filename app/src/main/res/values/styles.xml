@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Glass Card Styles -->
+    <style name="Widget.ShizukuManager.GlassCard" parent="">
+        <item name="android:background">@drawable/bg_glass_card</item>
+        <item name="android:elevation">@dimen/elevation_glass_card</item>
+        <item name="android:outlineProvider">background</item>
+        <item name="android:clipToOutline">true</item>
+        <item name="android:padding">@dimen/space_md</item>
+    </style>
+
+    <style name="Widget.ShizukuManager.GlassCardSubtle" parent="">
+        <item name="android:background">@drawable/bg_glass_card_subtle</item>
+        <item name="android:elevation">2dp</item>
+        <item name="android:outlineProvider">background</item>
+        <item name="android:clipToOutline">true</item>
+        <item name="android:padding">@dimen/space_sm</item>
+    </style>
+
+    <!-- Gradient Action Button Base -->
+    <style name="Widget.ShizukuManager.GradientButton" parent="Widget.Material3.Button.UnelevatedButton">
+        <item name="android:minHeight">@dimen/button_height_primary</item>
+        <item name="android:textColor">@color/text_on_gradient</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingStart">@dimen/space_md</item>
+        <item name="android:paddingEnd">@dimen/space_md</item>
+        <item name="backgroundTint">@null</item>
+        <item name="iconTint">@color/text_on_gradient</item>
+        <item name="iconSize">@dimen/icon_size_sm</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">@dimen/space_xs</item>
+        <item name="rippleColor">@color/ripple_white</item>
+        <item name="android:stateListAnimator">@animator/btn_press_scale</item>
+        <item name="android:elevation">@dimen/elevation_button</item>
+    </style>
+
+    <style name="Widget.ShizukuManager.Button.Enable" parent="Widget.ShizukuManager.GradientButton">
+        <item name="android:background">@drawable/btn_grad_enable</item>
+    </style>
+
+    <style name="Widget.ShizukuManager.Button.Disable" parent="Widget.ShizukuManager.GradientButton">
+        <item name="android:background">@drawable/btn_grad_disable</item>
+    </style>
+
+    <style name="Widget.ShizukuManager.Button.Freeze" parent="Widget.ShizukuManager.GradientButton">
+        <item name="android:background">@drawable/btn_grad_freeze</item>
+    </style>
+
+    <style name="Widget.ShizukuManager.Button.Unfreeze" parent="Widget.ShizukuManager.GradientButton">
+        <item name="android:background">@drawable/btn_grad_unfreeze</item>
+    </style>
+
+    <style name="Widget.ShizukuManager.Button.ForceStop" parent="Widget.ShizukuManager.GradientButton">
+        <item name="android:background">@drawable/btn_grad_force_stop</item>
+    </style>
+
+    <style name="Widget.ShizukuManager.Button.Uninstall" parent="Widget.ShizukuManager.GradientButton">
+        <item name="android:background">@drawable/btn_grad_uninstall</item>
+    </style>
+
+    <!-- Secondary Glass Button -->
+    <style name="Widget.ShizukuManager.Button.Secondary" parent="Widget.Material3.Button.UnelevatedButton">
+        <item name="android:minHeight">@dimen/button_height_compact</item>
+        <item name="android:background">@drawable/btn_secondary_glass</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textColor">@color/brand_primary</item>
+        <item name="android:textSize">13.5sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="iconTint">@color/brand_primary</item>
+        <item name="iconSize">@dimen/icon_size_sm</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">@dimen/space_xs</item>
+        <item name="rippleColor">@color/ripple_soft_purple</item>
+        <item name="android:stateListAnimator">@animator/btn_press_scale</item>
+        <item name="android:elevation">2dp</item>
+    </style>
+
+    <!-- Compact Chip Style -->
+    <style name="Widget.ShizukuManager.FilterChip" parent="Widget.Material3.Chip.Filter">
+        <item name="chipBackgroundColor">@color/chip_bg_selector</item>
+        <item name="android:textColor">@color/chip_text_selector</item>
+        <item name="chipStrokeColor">@color/glass_stroke_subtle</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipCornerRadius">@dimen/radius_pill</item>
+        <item name="checkedIconTint">@color/text_on_gradient</item>
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:minHeight">@dimen/min_touch_target</item>
+    </style>
+
+    <!-- State Pill Text Style -->
+    <style name="Widget.ShizukuManager.StatePill" parent="">
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:textSize">11.5sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans</item>
+    </style>
+</resources>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Soft Gradient Background Palette -->
+    <color name="bg_grad_top_start">#F2ECFF</color>
+    <color name="bg_grad_mid_lavender">#E8DFFF</color>
+    <color name="bg_grad_mid_pink">#FCE3F0</color>
+    <color name="bg_grad_bottom_blue">#DCEFFF</color>
+    <color name="bg_grad_white">#FAFCFF</color>
+
+    <!-- Atmospheric Blurred Blob Colors -->
+    <color name="blob_lavender">#99B9A6FF</color>
+    <color name="blob_soft_purple">#88C7B2FF</color>
+    <color name="blob_pastel_pink">#99FFB8D9</color>
+    <color name="blob_light_blue">#99A8D8FF</color>
+    <color name="blob_white_glow">#B3FFFFFF</color>
+
+    <!-- Glassmorphism Surfaces -->
+    <color name="glass_surface_primary">#EBFFFFFF</color>
+    <color name="glass_surface_secondary">#CCFFFFFF</color>
+    <color name="glass_surface_elevated">#F5FFFFFF</color>
+    <color name="glass_surface_nav">#E6FFFFFF</color>
+    <color name="glass_stroke_light">#CCFFFFFF</color>
+    <color name="glass_stroke_subtle">#4D8A7AE8</color>
+    <color name="glass_shadow_soft">#1A4A3B8F</color>
+
+    <!-- Brand & Accent Tokens -->
+    <color name="brand_primary">#6B56E6</color>
+    <color name="brand_primary_dark">#5542C9</color>
+    <color name="brand_secondary">#A663E8</color>
+    <color name="brand_lavender">#8D7DF2</color>
+    <color name="brand_pink">#E9609F</color>
+    <color name="brand_light_blue">#5C94FA</color>
+
+    <!-- Text Hierarchy -->
+    <color name="text_primary">#1D1836</color>
+    <color name="text_secondary">#5A5378</color>
+    <color name="text_tertiary">#867FA3</color>
+    <color name="text_on_gradient">#FFFFFF</color>
+
+    <!-- Button Gradient Colors (Strict Mapping) -->
+    <!-- Enable: Blue-Purple -->
+    <color name="btn_enable_start">#5B7CFA</color>
+    <color name="btn_enable_end">#7A5AF8</color>
+    <color name="btn_enable_start_pressed">#4968E3</color>
+    <color name="btn_enable_end_pressed">#6647E0</color>
+
+    <!-- Disable: Pink-Purple -->
+    <color name="btn_disable_start">#EC5D9F</color>
+    <color name="btn_disable_end">#9B5DE5</color>
+    <color name="btn_disable_start_pressed">#D44B8B</color>
+    <color name="btn_disable_end_pressed">#8448CE</color>
+
+    <!-- Freeze: Purple -->
+    <color name="btn_freeze_start">#8C62F8</color>
+    <color name="btn_freeze_end">#6B42DB</color>
+    <color name="btn_freeze_start_pressed">#7850DF</color>
+    <color name="btn_freeze_end_pressed">#5832C2</color>
+
+    <!-- Unfreeze: Lavender -->
+    <color name="btn_unfreeze_start">#B298FF</color>
+    <color name="btn_unfreeze_end">#7C6CF6</color>
+    <color name="btn_unfreeze_start_pressed">#9C80EE</color>
+    <color name="btn_unfreeze_end_pressed">#6757DF</color>
+
+    <!-- Force Stop: Orange-Pink -->
+    <color name="btn_force_stop_start">#FF7E5F</color>
+    <color name="btn_force_stop_end">#F0528B</color>
+    <color name="btn_force_stop_start_pressed">#E66B4E</color>
+    <color name="btn_force_stop_end_pressed">#D74077</color>
+
+    <!-- Uninstall: Red-Pink -->
+    <color name="btn_uninstall_start">#F25767</color>
+    <color name="btn_uninstall_end">#DC356C</color>
+    <color name="btn_uninstall_start_pressed">#DA4454</color>
+    <color name="btn_uninstall_end_pressed">#C2275A</color>
+
+    <!-- State & Semantic Badges -->
+    <color name="state_enabled_bg">#E5F8EE</color>
+    <color name="state_enabled_fg">#117A4B</color>
+
+    <color name="state_disabled_bg">#FCE7F1</color>
+    <color name="state_disabled_fg">#B0255E</color>
+
+    <color name="state_suspended_bg">#EFE9FF</color>
+    <color name="state_suspended_fg">#5E38C2</color>
+
+    <color name="state_system_bg">#E6F1FF</color>
+    <color name="state_system_fg">#2359A8</color>
+
+    <color name="state_user_bg">#F2EEFF</color>
+    <color name="state_user_fg">#6148BA</color>
+
+    <color name="state_warning_bg">#FFF1E6</color>
+    <color name="state_warning_fg">#BA5018</color>
+
+    <color name="state_error_bg">#FDE8EC</color>
+    <color name="state_error_fg">#B82542</color>
+
+    <color name="ripple_soft_purple">#296B56E6</color>
+    <color name="ripple_white">#3DFFFFFF</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="transparent">#00000000</color>
+</resources>

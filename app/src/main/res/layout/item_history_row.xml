@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Widget.ShizukuManager.GlassCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/space_xs"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvHistoryAppName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.ShizukuManager.CardTitle" />
+
+            <TextView
+                android:id="@+id/tvHistoryPackage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.ShizukuManager.Mono" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvHistoryResultPill"
+            style="@style/Widget.ShizukuManager.StatePill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xs"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvHistoryOperation"
+            style="@style/Widget.ShizukuManager.StatePill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pill_user"
+            android:textColor="@color/state_user_fg" />
+
+        <TextView
+            android:id="@+id/tvHistoryTransition"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_xs"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.ShizukuManager.Body" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvHistoryTimestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textAppearance="@style/TextAppearance.ShizukuManager.Caption" />
+
+    <TextView
+        android:id="@+id/tvHistoryError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xs"
+        android:background="@drawable/pill_disabled"
+        android:padding="@dimen/space_xs"
+        android:textAppearance="@style/TextAppearance.ShizukuManager.Caption"
+        android:textColor="@color/state_error_fg"
+        android:visibility="gone" />
+</LinearLayout>

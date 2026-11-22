@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.shizukumanager.app.ui.fragment.DashboardFragment"
+        android:label="@string/nav_dashboard">
+        <action
+            android:id="@+id/action_dashboard_to_allApps"
+            app:destination="@id/allAppsFragment"
+            app:enterAnim="@anim/fade_in_soft"
+            app:exitAnim="@anim/fade_out_soft"
+            app:popEnterAnim="@anim/fade_in_soft"
+            app:popExitAnim="@anim/fade_out_soft" />
+        <action
+            android:id="@+id/action_dashboard_to_disabledApps"
+            app:destination="@id/disabledAppsFragment"
+            app:enterAnim="@anim/fade_in_soft"
+            app:exitAnim="@anim/fade_out_soft" />
+        <action
+            android:id="@+id/action_dashboard_to_suspendedApps"
+            app:destination="@id/suspendedAppsFragment"
+            app:enterAnim="@anim/fade_in_soft"
+            app:exitAnim="@anim/fade_out_soft" />
+        <action
+            android:id="@+id/action_dashboard_to_profiles"
+            app:destination="@id/profilesFragment"
+            app:enterAnim="@anim/fade_in_soft"
+            app:exitAnim="@anim/fade_out_soft" />
+        <action
+            android:id="@+id/action_dashboard_to_history"
+            app:destination="@id/historyFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_dashboard_to_settings"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/allAppsFragment"
+        android:name="com.shizukumanager.app.ui.fragment.AllAppsFragment"
+        android:label="@string/nav_all_apps">
+        <argument
+            android:name="initialStateFilter"
+            android:defaultValue="ALL"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_to_appDetails"
+            app:destination="@id/appDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/disabledAppsFragment"
+        android:name="com.shizukumanager.app.ui.fragment.DisabledAppsFragment"
+        android:label="@string/nav_disabled">
+        <action
+            android:id="@+id/action_to_appDetails"
+            app:destination="@id/appDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/suspendedAppsFragment"
+        android:name="com.shizukumanager.app.ui.fragment.SuspendedAppsFragment"
+        android:label="@string/nav_suspended">
+        <action
+            android:id="@+id/action_to_appDetails"
+            app:destination="@id/appDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/appDetailsFragment"
+        android:name="com.shizukumanager.app.ui.fragment.AppDetailsFragment"
+        android:label="@string/details_title">
+        <argument
+            android:name="packageName"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profilesFragment"
+        android:name="com.shizukumanager.app.ui.fragment.ProfilesFragment"
+        android:label="@string/nav_profiles" />
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.shizukumanager.app.ui.fragment.HistoryFragment"
+        android:label="@string/nav_history" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.shizukumanager.app.ui.fragment.SettingsFragment"
+        android:label="@string/nav_settings" />
+</navigation>

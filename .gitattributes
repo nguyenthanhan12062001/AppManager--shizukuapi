@@ -1,0 +1,21 @@
+# Git Attributes - xac dinh xu ly dong xuong va tap nhi phan
+
+* text=auto eol=lf
+
+*.java text diff=java
+*.xml text diff=xml
+*.kts text
+*.kt text
+*.properties text
+*.json text
+*.md text
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
+*.jks binary
+
+signing.properties linguist-generated=true
+.gradle linguist-generated=true

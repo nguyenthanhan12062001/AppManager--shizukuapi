@@ -1,0 +1,15 @@
+# Release signing configuration for Shizuku Manager
+# Copy this file to signing.properties and fill in your own values.
+# DO NOT commit signing.properties to version control.
+
+# Path to your release keystore (JKS). Can be absolute or relative to the project root.
+storeFile=path/to/release-key.jks
+
+# Keystore password
+storePassword=YOUR_STORE_PASSWORD
+
+# Key alias
+keyAlias=YOUR_KEY_ALIAS
+
+# Key password
+keyPassword=YOUR_KEY_PASSWORD

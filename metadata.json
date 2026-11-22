@@ -1,0 +1,6 @@
+{
+  "name": "Shizuku Manager",
+  "description": "Manage installed Android app states (Enable, Disable, Suspend, Freeze, Force Stop) via Shizuku without root.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

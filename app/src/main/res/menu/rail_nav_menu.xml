@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboardFragment"
+        android:icon="@drawable/ic_dashboard"
+        android:title="@string/nav_dashboard" />
+    <item
+        android:id="@+id/allAppsFragment"
+        android:icon="@drawable/ic_apps"
+        android:title="@string/nav_all_apps" />
+    <item
+        android:id="@+id/disabledAppsFragment"
+        android:icon="@drawable/ic_disabled"
+        android:title="@string/nav_disabled" />
+    <item
+        android:id="@+id/suspendedAppsFragment"
+        android:icon="@drawable/ic_frozen"
+        android:title="@string/nav_suspended" />
+    <item
+        android:id="@+id/profilesFragment"
+        android:icon="@drawable/ic_profiles"
+        android:title="@string/nav_profiles" />
+    <item
+        android:id="@+id/historyFragment"
+        android:icon="@drawable/ic_history"
+        android:title="@string/nav_history" />
+    <item
+        android:id="@+id/settingsFragment"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/nav_settings" />
+</menu>

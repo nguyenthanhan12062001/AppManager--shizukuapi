@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/space_md">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxWidth="@dimen/content_max_width"
+            android:orientation="vertical">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/space_md">
+
+                <ImageButton
+                    android:id="@+id/btnBackSettings"
+                    android:layout_width="@dimen/min_touch_target"
+                    android:layout_height="@dimen/min_touch_target"
+                    android:background="@drawable/bg_glass_pill"
+                    android:contentDescription="@string/cd_back"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_back"
+                    app:tint="@color/brand_primary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_sm"
+                    android:text="@string/settings_title"
+                    android:textAppearance="@style/TextAppearance.ShizukuManager.Display" />
+            </LinearLayout>
+
+            <!-- Section: Shizuku -->
+            <LinearLayout
+                style="@style/Widget.ShizukuManager.GlassCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_section_shizuku"
+                    android:textAppearance="@style/TextAppearance.ShizukuManager.SectionTitle" />
+
+                <TextView
+                    android:id="@+id/tvSettingsShizukuStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_xs"
+                    android:textAppearance="@style/TextAppearance.ShizukuManager.CardTitle" />
+
+                <TextView
+                    android:id="@+id/tvSettingsShizukuDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textAppearance="@style/TextAppearance.ShizukuManager.Body" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_sm"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSettingsCheckShizuku"
+                        style="@style/Widget.ShizukuManager.Button.Secondary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/space_xs"
+                        android:layout_weight="1"
+                        android:text="@string/shizuku_action_check"
+                        app:icon="@drawable/ic_refresh" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSettingsGrantShizuku"
+                        style="@style/Widget.ShizukuManager.Button.Enable"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_xs"
+                        android:layout_weight="1"
+                        android:text="@string/shizuku_action_grant"
+                        app:icon="@drawable/ic_shield_check" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Section: Appearance & Language -->
+            <LinearLayout
+                style="@style/Widget.ShizukuManager.GlassCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_sm"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_section_appearance"
+                    android:textAppearance="@style/TextAppearance.ShizukuManager.SectionTitle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_sm"
+                    android:text="@string/settings_language"
+                    android:textAppearance="@style/TextAppearance.ShizukuManager.CardTitle" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupLanguage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_xs"
+                    app:selectionRequired="true"
+                    app:singleLine="true"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipLangSystem"
+                        style="@style/Widget.ShizukuManager.FilterChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_language_system" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipLangEn"
+                        style="@style/Widget.ShizukuManager.FilterChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_language_en" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipLangVi"
+                        style="@style/Widget.ShizukuManager.FilterChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_language_vi" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchAmbientOrbs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_sm"
+                    android:minHeight="@dimen/min_touch_target"
+                    android:text="@string/settings_atmosphere_blur"
+                    android:textAppearance="@style/TextAppearance.ShizukuManager.CardTitle" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_atmosphere_blur_desc"
+                    android:textAppearance="@style/TextAppearance.ShizukuManager.Caption" />
+            </LinearLayout>
+
+            <!-- Section: Behavior -->
+            <LinearLayout
+                style="@style/Widget.ShizukuManager.GlassCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_sm"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_section_behavior"
+                    android:textAppearance="@style/TextAppearance.ShizukuManager.SectionTitle" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchConfirmSingle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_xs"
+                    android:minHeight="@dimen/min_touch_target"
+                    android:text="@string/settings_confirm_single"
+                    android:textAppearance="@style/TextAppearance.ShizukuManager.CardTitle" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_confirm_single_desc"
+                    android:textAppearance="@style/TextAppearance.ShizukuManager.Caption" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchAutoRefresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_sm"
+                    android:minHeight="@dimen/min_touch_target"
+                    android:text="@string/settings_auto_refresh"
+                    android:textAppearance="@style/TextAppearance.ShizukuManager.CardTitle" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_auto_refresh_desc"
+                    android:textAppearance="@style/TextAppearance.ShizukuManager.Caption" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchShowSystemDefault"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_sm"
+                    android:minHeight="@dimen/min_touch_target"
+                    android:text="@string/settings_show_system"
+                    android:textAppearance="@style/TextAppearance.ShizukuManager.CardTitle" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_show_system_desc"
+                    android:textAppearance="@style/TextAppearance.ShizukuManager.Caption" />
+            </LinearLayout>
+
+            <!-- Section: Data -->
+            <LinearLayout
+                style="@style/Widget.ShizukuManager.GlassCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_sm"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_section_data"
+                    android:textAppearance="@style/TextAppearance.ShizukuManager.SectionTitle" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnExportProfiles"
+                    style="@style/Widget.ShizukuManager.Button.Secondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_sm"
+                    android:text="@string/settings_export_profiles"
+                    app:icon="@drawable/ic_export" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnImportProfiles"
+                    style="@style/Widget.ShizukuManager.Button.Secondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_xs"
+                    android:text="@string/settings_import_profiles"
+                    app:icon="@drawable/ic_import" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSettingsClearHistory"
+                    style="@style/Widget.ShizukuManager.Button.Uninstall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_xs"
+                    android:text="@string/settings_clear_history"
+                    app:icon="@drawable/ic_delete" />
+            </LinearLayout>
+
+            <!-- Section: About -->
+            <LinearLayout
+                style="@style/Widget.ShizukuManager.GlassCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_sm"
+                android:layout_marginBottom="@dimen/space_lg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_section_about"
+                    android:textAppearance="@style/TextAppearance.ShizukuManager.SectionTitle" />
+
+                <TextView
+                    android:id="@+id/tvAboutVersion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_xs"
+                    android:textAppearance="@style/TextAppearance.ShizukuManager.CardTitle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/settings_developer_label"
+                    android:textAppearance="@style/TextAppearance.ShizukuManager.Body" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_xs"
+                    android:text="@string/settings_libraries_label"
+                    android:textAppearance="@style/TextAppearance.ShizukuManager.Caption" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

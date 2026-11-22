@@ -1,0 +1,20 @@
+# EditorConfig - dot.org
+# Trinh thuat thiet lap kien thuc code dung chung cho tat ca nganh lap trinh vien
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+max_line_length = 120
+trim_trailing_whitespace = true
+
+[*.{java,kts,kt,xml,json,properties,md,yml,yaml}]
+indent_size = 4
+indent_style = space
+
+[*.{png,jpg,jpeg,svg,webp,ico}]
+binary = true

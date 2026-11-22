@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shizuku Manager</string>
+
+    <!-- Thanh dieu huong -->
+    <string name="nav_dashboard">Tổng quan</string>
+    <string name="nav_all_apps">Ứng dụng</string>
+    <string name="nav_disabled">Vô hiệu hóa</string>
+    <string name="nav_suspended">Đóng băng</string>
+    <string name="nav_profiles">Cấu hình</string>
+    <string name="nav_history">Lịch sử</string>
+    <string name="nav_settings">Cài đặt</string>
+
+    <!-- Dung chung -->
+    <string name="action_refresh">Làm mới</string>
+    <string name="action_cancel">Hủy</string>
+    <string name="action_confirm">Xác nhận</string>
+    <string name="action_close">Đóng</string>
+    <string name="action_save">Lưu</string>
+    <string name="action_ok">Đồng ý</string>
+    <string name="action_select_all">Chọn tất cả</string>
+    <string name="action_clear_selection">Bỏ chọn</string>
+    <string name="action_retry">Thử lại</string>
+    <string name="cd_back">Quay lại</string>
+    <string name="cd_app_icon">Biểu tượng ứng dụng</string>
+    <string name="cd_shizuku_icon">Biểu tượng trạng thái Shizuku</string>
+    <string name="cd_empty_illustration">Hình minh họa danh sách trống</string>
+    <string name="selected_count_format">Đã chọn %1$d</string>
+    <string name="loading_apps">Đang quét các gói ứng dụng đã cài đặt…</string>
+
+    <!-- Trang thai ket noi Shizuku -->
+    <string name="shizuku_status_title">Dịch vụ Shizuku</string>
+    <string name="shizuku_connected">Đã kết nối</string>
+    <string name="shizuku_connected_detail">Sẵn sàng • UID %1$d • API v%2$d</string>
+    <string name="shizuku_not_installed">Chưa cài đặt Shizuku</string>
+    <string name="shizuku_not_installed_detail">Hãy cài đặt ứng dụng Shizuku để quản lý trạng thái không cần Root.</string>
+    <string name="shizuku_not_running">Dịch vụ chưa chạy</string>
+    <string name="shizuku_not_running_detail">Mở Shizuku và khởi động dịch vụ qua Gỡ lỗi không dây hoặc ADB.</string>
+    <string name="shizuku_permission_required">Cần cấp quyền</string>
+    <string name="shizuku_permission_required_detail">Cấp quyền Shizuku để ứng dụng có thể điều khiển trạng thái gói.</string>
+    <string name="shizuku_action_check">Kiểm tra</string>
+    <string name="shizuku_action_grant">Cấp quyền</string>
+    <string name="shizuku_action_open">Mở Shizuku</string>
+
+    <!-- Tong quan -->
+    <string name="dashboard_title">Shizuku Manager</string>
+    <string name="dashboard_subtitle">Quản lý trạng thái ứng dụng trực tiếp không cần Root</string>
+    <string name="stat_total_apps">Tổng ứng dụng</string>
+    <string name="stat_enabled_apps">Đang bật</string>
+    <string name="stat_disabled_apps">Vô hiệu hóa</string>
+    <string name="stat_suspended_apps">Đình chỉ</string>
+    <string name="dashboard_quick_actions">Thao tác nhanh</string>
+    <string name="quick_view_disabled">App bị tắt</string>
+    <string name="quick_view_suspended">App đóng băng</string>
+    <string name="quick_profiles">Cấu hình</string>
+    <string name="quick_history">Lịch sử</string>
+    <string name="dashboard_recent_changes">Thay đổi trạng thái gần đây</string>
+    <string name="dashboard_no_recent_changes">Chưa có thao tác nào được ghi nhận. Chọn một ứng dụng để quản lý.</string>
+    <string name="dashboard_see_all">Xem tất cả</string>
+
+    <!-- Trang thai & Loai ung dung -->
+    <string name="state_enabled">Đang bật</string>
+    <string name="state_disabled">Vô hiệu hóa</string>
+    <string name="state_suspended">Đình chỉ</string>
+    <string name="state_disabled_suspended">Vô hiệu hóa &amp; Đóng băng</string>
+    <string name="type_system">Hệ thống</string>
+    <string name="type_user">Người dùng</string>
+
+    <!-- Danh sach ung dung -->
+    <string name="all_apps_title">Tất cả ứng dụng</string>
+    <string name="disabled_apps_title">Ứng dụng bị vô hiệu hóa</string>
+    <string name="disabled_apps_subtitle">Phát hiện trực tiếp từ PackageManager, bao gồm thay đổi từ ADB</string>
+    <string name="suspended_apps_title">Ứng dụng đang đình chỉ</string>
+    <string name="suspended_apps_subtitle">Ứng dụng được đóng băng bằng cơ chế Suspend của PackageManager</string>
+    <string name="search_apps_hint">Tìm theo tên hoặc Package Name…</string>
+    <string name="filter_all">Tất cả</string>
+    <string name="filter_user">Người dùng</string>
+    <string name="filter_system">Hệ thống</string>
+    <string name="filter_enabled">Đang bật</string>
+    <string name="filter_disabled">Vô hiệu hóa</string>
+    <string name="filter_suspended">Đình chỉ</string>
+    <string name="sort_name_asc">Tên (A-Z)</string>
+    <string name="sort_name_desc">Tên (Z-A)</string>
+    <string name="sort_updated_desc">Cập nhật gần nhất</string>
+    <string name="empty_all_apps">Không có ứng dụng nào khớp với tìm kiếm hoặc bộ lọc.</string>
+    <string name="empty_disabled_apps">Không phát hiện ứng dụng nào đang bị vô hiệu hóa.</string>
+    <string name="empty_suspended_apps">Hiện không có ứng dụng nào đang bị đình chỉ hoặc đóng băng.</string>
+
+    <!-- Thao tac cot loi -->
+    <string name="op_enable">Kích hoạt</string>
+    <string name="op_disable">Vô hiệu hóa</string>
+    <string name="op_suspend">Đình chỉ</string>
+    <string name="op_unsuspend">Gỡ đình chỉ</string>
+    <string name="op_freeze">Đóng băng</string>
+    <string name="op_unfreeze">Gỡ đóng băng</string>
+    <string name="op_force_stop">Buộc dừng</string>
+    <string name="op_open_info">Thông tin</string>
+    <string name="op_uninstall">Gỡ cài đặt</string>
+
+    <!-- Chi tiet ung dung -->
+    <string name="details_title">Chi tiết ứng dụng</string>
+    <string name="details_metadata_section">Thông tin gói ứng dụng</string>
+    <string name="details_actions_section">Điều khiển trạng thái</string>
+    <string name="details_mechanism_note">Vô hiệu hóa (Disable) tắt hoàn toàn gói cho người dùng hiện tại và ẩn biểu tượng. Đóng băng (Freeze) dùng cơ chế Đình chỉ (pm suspend), làm mờ biểu tượng và tạm dừng chạy mà không tắt thành phần.</string>
+    <string name="label_package_name">Package Name</string>
+    <string name="label_version_name">Tên phiên bản</string>
+    <string name="label_version_code">Mã phiên bản</string>
+    <string name="label_uid">UID</string>
+    <string name="label_apk_path">Đường dẫn APK</string>
+    <string name="label_install_date">Ngày cài đặt</string>
+    <string name="label_update_date">Cập nhật lần cuối</string>
+    <string name="label_app_type">Loại ứng dụng</string>
+    <string name="label_enabled_state">Trạng thái kích hoạt</string>
+    <string name="label_suspended_state">Trạng thái đình chỉ</string>
+    <string name="value_yes">Có</string>
+    <string name="value_no">Không</string>
+    <string name="value_unknown">Không rõ</string>
+    <string name="details_protected_notice">Thành phần hệ thống quan trọng. Thay đổi có thể làm thiết bị mất ổn định.</string>
+    <string name="details_self_protected">Không thể vô hiệu hóa, đình chỉ hoặc buộc dừng chính ứng dụng Shizuku Manager.</string>
+    <string name="details_suspend_unsupported">Hệ thống hoặc chính sách Android không hỗ trợ đình chỉ gói này.</string>
+
+    <!-- Xac nhan & Ket qua -->
+    <string name="confirm_action_title">Xác nhận %1$s</string>
+    <string name="confirm_action_message">Thực hiện %1$s cho %2$s (%3$s)?</string>
+    <string name="confirm_critical_message">CẢNH BÁO: %1$s là thành phần hệ thống quan trọng (%2$s). Vô hiệu hóa hoặc dừng gói này có thể gây lỗi hệ thống. Vẫn tiếp tục?</string>
+    <string name="confirm_bulk_title">Xác nhận %1$s hàng loạt</string>
+    <string name="confirm_bulk_message">Thực hiện %1$s trên %2$d ứng dụng đã chọn? Trạng thái từng gói sẽ được kiểm tra lại từ PackageManager.</string>
+    <string name="progress_executing">Đang thực hiện %1$s…</string>
+    <string name="progress_item_format">%1$d / %2$d • %3$s</string>
+    <string name="result_success_single">Đã %1$s và xác minh thành công cho %2$s.</string>
+    <string name="result_failed_single">%1$s thất bại cho %2$s: %3$s</string>
+    <string name="bulk_result_title">Kết quả thực thi</string>
+    <string name="bulk_result_all_success">Tất cả %1$d thao tác đã thành công và được xác minh.</string>
+    <string name="bulk_result_partial">Hoàn tất một phần: %1$d thành công, %2$d thất bại.</string>
+    <string name="bulk_result_all_failed">Tất cả %1$d thao tác đều thất bại.</string>
+
+    <!-- Thong bao loi -->
+    <string name="err_shizuku_not_installed">Chưa cài đặt Shizuku trên thiết bị.</string>
+    <string name="err_shizuku_not_running">Dịch vụ Shizuku hiện không chạy.</string>
+    <string name="err_shizuku_permission">Chưa được cấp quyền truy cập Shizuku.</string>
+    <string name="err_binder_lost">Mất kết nối Shizuku Binder trong khi thực thi.</string>
+    <string name="err_package_not_found">Không tìm thấy gói ứng dụng trên thiết bị.</string>
+    <string name="err_suspend_unsupported">Ứng dụng hoặc phiên bản Android này không hỗ trợ Suspend.</string>
+    <string name="err_insufficient_privilege">Không đủ quyền Shell/Hệ thống để thao tác gói này.</string>
+    <string name="err_self_operation">Không thể thực hiện thao tác này lên chính Shizuku Manager.</string>
+    <string name="err_state_not_changed">Lệnh đã chạy nhưng trạng thái PackageManager không thay đổi như mong đợi.</string>
+    <string name="err_unknown">Thao tác thất bại (%1$s).</string>
+
+    <!-- Cau hinh ung dung -->
+    <string name="profiles_title">Cấu hình ứng dụng</string>
+    <string name="profiles_subtitle">Áp dụng cấu hình trạng thái cho nhóm ứng dụng đã chọn</string>
+    <string name="profile_create">Tạo cấu hình</string>
+    <string name="profile_name_hint">Tên cấu hình (VD: Gaming Profile)</string>
+    <string name="profile_desc_hint">Mô tả ngắn</string>
+    <string name="profile_apps_count">Đã cấu hình %1$d ứng dụng</string>
+    <string name="profile_saved_state_available">Đã lưu trạng thái khôi phục (%1$s)</string>
+    <string name="profile_no_saved_state">Chưa có điểm khôi phục đã lưu</string>
+    <string name="profile_action_apply">Áp dụng</string>
+    <string name="profile_action_restore">Khôi phục</string>
+    <string name="profile_action_manage_apps">Sửa ứng dụng</string>
+    <string name="profile_action_rename">Đổi tên</string>
+    <string name="profile_action_delete">Xóa</string>
+    <string name="profile_target_disable">Vô hiệu hóa</string>
+    <string name="profile_target_suspend">Đóng băng (Suspend)</string>
+    <string name="profile_target_enable">Kích hoạt</string>
+    <string name="profile_manage_apps_title">Chọn ứng dụng cho cấu hình</string>
+    <string name="profile_delete_confirm">Xóa cấu hình \"%1$s\" và các trạng thái đã lưu?</string>
+    <string name="profile_empty">Chưa có cấu hình nào. Hãy tạo cấu hình Gaming, Daily hoặc Minimal.</string>
+    <string name="profile_no_apps_warning">Hãy thêm ít nhất một ứng dụng vào cấu hình trước khi áp dụng.</string>
+    <string name="profile_restore_confirm">Khôi phục %1$d ứng dụng trong \"%2$s\" về trạng thái trước khi áp dụng?</string>
+    <string name="profile_preset_gaming">Gaming Profile</string>
+    <string name="profile_preset_gaming_desc">Đóng băng hoặc tắt ứng dụng nền khi chơi game</string>
+    <string name="profile_preset_daily">Daily Profile</string>
+    <string name="profile_preset_daily_desc">Cấu hình sử dụng cân bằng hằng ngày</string>
+    <string name="profile_preset_minimal">Minimal Profile</string>
+    <string name="profile_preset_minimal_desc">Chỉ giữ các ứng dụng thiết yếu ở trạng thái bật</string>
+
+    <!-- Lich su -->
+    <string name="history_title">Lịch sử thao tác</string>
+    <string name="history_filter_all">Tất cả</string>
+    <string name="history_filter_success">Thành công</string>
+    <string name="history_filter_failed">Thất bại</string>
+    <string name="history_clear">Xóa lịch sử</string>
+    <string name="history_clear_confirm">Xóa toàn bộ lịch sử thao tác đã lưu?</string>
+    <string name="history_cleared">Đã xóa lịch sử thao tác.</string>
+    <string name="history_empty">Chưa có thao tác nào được thực hiện.</string>
+    <string name="history_transition_format">%1$s → %2$s</string>
+    <string name="history_status_success">Thành công</string>
+    <string name="history_status_failed">Thất bại</string>
+
+    <!-- Cai dat -->
+    <string name="settings_title">Cài đặt</string>
+    <string name="settings_section_shizuku">Kết nối Shizuku</string>
+    <string name="settings_section_appearance">Giao diện &amp; Ngôn ngữ</string>
+    <string name="settings_section_behavior">Hành vi &amp; An toàn</string>
+    <string name="settings_section_data">Dữ liệu &amp; Cấu hình</string>
+    <string name="settings_section_about">Giới thiệu</string>
+    <string name="settings_language">Ngôn ngữ</string>
+    <string name="settings_language_system">Mặc định hệ thống</string>
+    <string name="settings_language_en">English</string>
+    <string name="settings_language_vi">Tiếng Việt</string>
+    <string name="settings_atmosphere_blur">Nền Gradient Mờ Mềm Mại</string>
+    <string name="settings_atmosphere_blur_desc">Hiển thị các vùng màu pastel lan tỏa trên nền ứng dụng</string>
+    <string name="settings_confirm_single">Xác nhận trước khi thao tác</string>
+    <string name="settings_confirm_single_desc">Hỏi xác nhận trước khi vô hiệu hóa, đóng băng hoặc buộc dừng</string>
+    <string name="settings_auto_refresh">Tự động làm mới trạng thái</string>
+    <string name="settings_auto_refresh_desc">Truy vấn lại PackageManager khi quay lại ứng dụng</string>
+    <string name="settings_show_system">Hiển thị ứng dụng hệ thống mặc định</string>
+    <string name="settings_show_system_desc">Bao gồm gói hệ thống khi mở danh sách tất cả ứng dụng</string>
+    <string name="settings_export_profiles">Xuất cấu hình (JSON)</string>
+    <string name="settings_import_profiles">Nhập cấu hình (JSON)</string>
+    <string name="settings_clear_history">Xóa lịch sử thao tác</string>
+    <string name="settings_export_success">Đã xuất cấu hình thành công.</string>
+    <string name="settings_export_failed">Xuất cấu hình thất bại: %1$s</string>
+    <string name="settings_import_success">Đã nhập %1$d cấu hình thành công.</string>
+    <string name="settings_import_failed">Nhập cấu hình thất bại: %1$s</string>
+    <string name="settings_version_label">Phiên bản %1$s (%2$d)</string>
+    <string name="settings_developer_label">Native Java • Material Design 3 • Shizuku Không Root</string>
+    <string name="settings_libraries_label">Thư viện: Shizuku API (Rikka), AndroidX Room, Material Components 3, Navigation, Gson</string>
+</resources>

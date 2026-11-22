@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.ShizukuManager" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/brand_primary</item>
+        <item name="colorOnPrimary">@color/text_on_gradient</item>
+        <item name="colorPrimaryContainer">@color/state_suspended_bg</item>
+        <item name="colorOnPrimaryContainer">@color/brand_primary_dark</item>
+        <item name="colorSecondary">@color/brand_secondary</item>
+        <item name="colorOnSecondary">@color/text_on_gradient</item>
+        <item name="colorSurface">@color/glass_surface_elevated</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorSurfaceVariant">@color/bg_grad_mid_lavender</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        <item name="android:windowBackground">@color/bg_grad_top_start</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.ShizukuManager.Dialog</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.ShizukuManager.BottomSheet</item>
+    </style>
+
+    <style name="ThemeOverlay.ShizukuManager.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.ShizukuManager.Dialog</item>
+        <item name="colorSurface">@color/glass_surface_elevated</item>
+    </style>
+
+    <style name="ThemeOverlay.ShizukuManager.BottomSheet" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.ShizukuManager.BottomSheet</item>
+    </style>
+
+    <style name="Widget.ShizukuManager.BottomSheet" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.ShizukuManager.Dialog</item>
+        <item name="backgroundTint">@color/glass_surface_elevated</item>
+    </style>
+</resources>
