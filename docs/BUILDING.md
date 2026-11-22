@@ -12,7 +12,7 @@
 ## Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/shizuku-manager.git
+git clone https://github.com/nguyenthanhan12062001/AppManager--shizukuapi.git
 cd shizuku-manager
 ```
 

@@ -16,7 +16,7 @@ feature suggestions, documentation improvements, and code contributions.
 ### Project Setup
 
 ```bash
-git clone https://github.com/your-username/shizuku-manager.git
+git clone https://github.com/nguyenthanhan12062001/AppManager--shizukuapi.git
 cd shizuku-manager
 ```
 

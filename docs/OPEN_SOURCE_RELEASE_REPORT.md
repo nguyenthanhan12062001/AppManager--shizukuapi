@@ -20,7 +20,7 @@ Bao cao nay tóm tat toan bo cong viec da thuc hien de chuyen source code cua Sh
 
 | Phase | Tieu de | Tinh trang | Ket qua chinh |
 |-------|---------|------------|---------------|
-| 1 | Complete Codebase Audit | Hoan thanh | Tao `docs/RELEASE_AUDIT.md` voi 23 van de duoc phan loai (5 CRITICAL, 4 HIGH, 3 MEDIUM, 3 LOW, 4 IMPROVEMENT) |
+| 1 | Complete Codebase Audit | Hoan thanh | Danh gia toan bo repository, ghi nhan 23 van de duoc phan loai (5 CRITICAL, 4 HIGH, 3 MEDIUM, 3 LOW, 4 IMPROVEMENT) |
 | 2 | Security & Private Data Sanitization | Hoan thanh | Xoa `release-key.jks`, xoa mat khau trong `gradle.properties`, tao `signing.properties.example`, cap nhat `build.gradle.kts` de doc tu `signing.properties`, them quy tắc vao `.gitignore` |
 | 3 | Code Refinement | Hoan thanh | Doi ten package tu `com.example` sang `com.shizukumanager.app` tren tat ca Java, XML, AIDL, test files |
 | 4 | Java Comment Standardization | Hoan thanh | Kiem tra toan bo file Java — tat ca comment da su dung tieng Viet khong dau, khong can sua doi |

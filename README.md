@@ -31,20 +31,20 @@ Manage installed Android app states (Enable, Disable, Suspend, Freeze, Force Sto
   </tr>
 </table>
 
-Screenshots luu trong thu muc `Screenshot/`. Tat ca anh duoc chup tu ung dung thuc su, khong su dung mockup.
+Screenshots are stored in the `Screenshot/` directory. All images are captured from the actual application; no mockups are used.
 
 ## Key Features
 
-- **Enable / Disable** — Bat tat hoac vo hieu hoa ung dung qua PackageManager
-- **Suspend / Unsuspend** — Dong bang / mo dong bang ung dung (Android 10+)
-- **Freeze / Unfreeze** — Dong bang / mo dong bang bang Shizuku UserService
-- **Force Stop** — Buoc dung ung dung dang chay
-- **Uninstall** — Goi cai dat ung dung (khong bao gom ung dung chinh minh)
-- **App Profiles** — Luu va ap bang tap hieu lenh vao nhieu cung luc (Gaming, Daily, Minimal...)
-- **Operation History** — Luu lich su tat ca cac thao tac da thuc hien
-- **Shizuku Integration** — Ket noi voi dich vu Shizuku de lay quyen cao cap khong can Root
-- **Localization** — Ho tro tieng Anh va tieng Viet
-- **Dark-friendly glassmorphism UI** — Giao dien Material Design 3 voi hieu ung gradient nen
+- **Enable / Disable** — Enable or disable apps via PackageManager
+- **Suspend / Unsuspend** — Suspend or unsuspend apps (Android 10+)
+- **Freeze / Unfreeze** — Freeze or unfreeze apps via Shizuku UserService
+- **Force Stop** — Force stop running apps
+- **Uninstall** — Uninstall apps (excluding the app itself)
+- **App Profiles** — Save and apply command batches to multiple apps at once (Gaming, Daily, Minimal...)
+- **Operation History** — Record all operations performed
+- **Shizuku Integration** — Connect to Shizuku service for elevated privileges without root
+- **Localization** — Supports English and Vietnamese
+- **Dark-friendly glassmorphism UI** — Material Design 3 with gradient background effects
 
 ## Technology Stack
 
@@ -61,16 +61,16 @@ Screenshots luu trong thu muc `Screenshot/`. Tat ca anh duoc chup tu ung dung th
 
 ## Architecture Overview
 
-Dự án sử dụng mô hình **Manual DI + Repository + MVVM** với luồng dữ liệu một chiều:
+The project uses **Manual DI + Repository + MVVM** architecture with a unidirectional data flow:
 
 ```
 View  <--->  ViewModel  <--->  Repository  <--->  Data Sources
                                         (Room, PackageManager, Shizuku)
 ```
 
-- **Manual DI** (`AppContainer`) — Quản lý vòng đời các thành phần, không phụ thuộc framework DI nặng.
-- **Repository** — Trung tâm truy cập dữ liệu: `AppRepository` (trang thai ung dung), `ProfileRepository` (cau hinh profile), `HistoryRepository` (lich su thao tac).
-- **ViewModel** — Giữ trạng thái UI, xử lý sự kiện, không trực tiếp thao tác Android Framework.
+- **Manual DI** (`AppContainer`) — Manages component lifecycles without heavyweight DI frameworks.
+- **Repository** — Central data access: `AppRepository` (app states), `ProfileRepository` (profile configs), `HistoryRepository` (operation history).
+- **ViewModel** — Holds UI state and handles events without directly touching Android Framework.
 - **Data Sources** — `SystemPackageScanner` (PackageManager), `ShizukuConnectionManager` (Shizuku Binder), `AppDatabase` (Room).
 
 ## Project Structure
@@ -95,14 +95,13 @@ shizuku-manager/
 │       │   │   ├── util/              # Utilities (icons, preferences, labels, dates)
 │       │   │   └── viewmodel/         # MVVM ViewModels
 │       │   └── res/                   # Resources (layouts, drawables, values, navigation)
-│       └── test/                      # Unit tests (JUnit, Robolectric)
+│       ├── test/                      # Unit tests (JUnit, Robolectric)
 │       └── androidTest/               # Instrumented tests (Espresso)
 ├── docs/
 │   ├── ARCHITECTURE.md
 │   ├── BUILDING.md
 │   ├── CHANGELOG.md
-│   ├── RELEASE.md
-│   └── RELEASE_AUDIT.md
+│   └── RELEASE.md
 ├── Screenshot/                        # App screenshots
 ├── build.gradle.kts
 ├── gradle.properties                  # Local Gradle settings (not committed)
@@ -115,42 +114,42 @@ shizuku-manager/
 
 ## Requirements
 
-- Android Studio (latest stable)
+- Android Studio (latest stable release)
 - Android SDK API 36 (compileSdk), minSdk 24
 - JDK 11+
 - Shizuku app installed on device/emulator (for full functionality)
-- Git (for cloning)
 
 ## Installation
 
 ```bash
-# Clone repository
-git clone https://github.com/your-username/shizuku-manager.git
+git clone https://github.com/nguyenthanhan12062001/AppManager--shizukuapi.git
 cd shizuku-manager
-
-# Open in Android Studio
-# File > Open > select shizuku-manager/ directory
-# Sync project with Gradle files
 ```
+
+Open the `shizuku-manager/` directory in Android Studio and sync Gradle files.
 
 ## Build Instructions
 
-### Debug Build (khong can cau hinh them)
+### Debug Build (no signing configuration required)
 
 ```bash
 ./gradlew assembleDebug
 ```
 
-APK se duoc tao tai `app/build/outputs/apk/debug/`.
+The APK is generated at `app/build/outputs/apk/debug/`.
 
-### Release Build (can cau hinh ky)
+### Release Build (signing configuration required)
 
-1. Tao file `signing.properties` tu `signing.properties.example`:
+Release builds require a signing configuration. Private keystore credentials are **not** included in the repository.
+
+1. Copy `signing.properties.example` to `signing.properties`:
+
    ```bash
    cp signing.properties.example signing.properties
    ```
 
-2. Chinh sua `signing.properties` voi thong tin keystore cua ban:
+2. Edit `signing.properties` with your own keystore values:
+
    ```
    storeFile=path/to/release-key.jks
    storePassword=YOUR_STORE_PASSWORD
@@ -158,52 +157,54 @@ APK se duoc tao tai `app/build/outputs/apk/debug/`.
    keyPassword=YOUR_KEY_PASSWORD
    ```
 
-3. Build Release:
+3. Build the Release APK:
+
    ```bash
    ./gradlew assembleRelease
    ```
 
-Neu `signing.properties` chua ton tai hoac chua day du, Build se that bai voi thong bao loi ro rang.
+If `signing.properties` is missing or incomplete, the build fails with a clear error message.
 
 ## Release Signing Configuration
 
-Thong tin ky Release khong duoc luu trong repository. Nguoi dung phai tu tao file `signing.properties` tu `signing.properties.example`.
+Release signing information is not stored in the repository. Users must create their own `signing.properties` from `signing.properties.example`.
 
-- `signing.properties` da duoc them vao `.gitignore` (khong bao gio duoc commit)
-- `release-key.jks` da duoc xoa khoi repository (bao mat)
-- Debug build su dung `debug.keystore` mac dinh cua Android SDK (khong can cau hinh)
+- `signing.properties` is listed in `.gitignore` and must never be committed.
+- `release-key.jks` has been removed from the repository (security).
+- Debug build uses the default Android SDK `debug.keystore` (no configuration required).
 
 ## Localization
 
-Ung dung ho tro hai ngon ngu:
-- **Tieng Anh** (`res/values/strings.xml`) — mac dinh
-- **Tieng Viet** (`res/values-vi/strings.xml`)
+The application supports two languages:
 
-Ngon ngu co the thay doi trong man hinh Cai dat > Ngon ngu. Ung dung su dung `AppCompatDelegate.setApplicationLocales()` de ho tro thay doi ngon ngu luot tai khong can khoi dong ung dung (Android 7+).
+- **English** (`res/values/strings.xml`) — default
+- **Vietnamese** (`res/values-vi/strings.xml`)
+
+The language can be changed in Settings > Language. The app uses `AppCompatDelegate.setApplicationLocales()` to support language changes at runtime without restarting (Android 7+).
 
 ## Contribution
 
-Chung toi chao danh tat ca cac dong gop. Xem huong dan chi tiet tai:
+We welcome all contributions. See the detailed guide at:
 
-- [CONTRIBUTING.md](CONTRIBUTING.md) — Moi truong phat trien, cai dat, quy trinh Pull Request
-- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) — Quy tac hoa cong dong
-- [SECURITY.md](SECURITY.md) — Ba cao lo hinh bao mat
+- [CONTRIBUTING.md](CONTRIBUTING.md) — Development environment, setup, Pull Request process
+- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) — Community guidelines
+- [SECURITY.md](SECURITY.md) — Security vulnerability reporting
 
-### Cach dong gop
+### How to contribute
 
-1. Fork repository
-2. Tao branch moi (`git checkout -b feature/ten-tinh-nang`)
-3. Thay doi code va commit (`git commit -m "feat: mo ta tinh nang"`)
-4. Push len branch (`git push origin feature/ten-tinh-nang`)
-5. Tao Pull Request
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/feature-name`)
+3. Make changes and commit (`git commit -m "feat: describe feature"`)
+4. Push to the branch (`git push origin feature/feature-name`)
+5. Open a Pull Request
 
 ## License
 
-Du an duoc phat hanh giua [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
-- [Shizuku](https://shizuku.rikka.app/) (Rikka) — Cung cap API ket noi khong can Root
+- [Shizuku](https://shizuku.rikka.app/) (Rikka) — Provides the API for non-root connections
 - [AndroidX](https://developer.android.com/jetpack/androidx) — Room, Navigation, Lifecycle, Material Components
-- [Gson](https://github.com/google/gson) — Xu ly JSON cho xuat/nhap Profile
-- [Material Design 3](https://m3.material.io/) — He thong thiet mat giao dien
+- [Gson](https://github.com/google/gson) — JSON processing for Profile export/import
+- [Material Design 3](https://m3.material.io/) — Design system for the UI
